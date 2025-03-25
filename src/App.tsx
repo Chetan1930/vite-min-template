@@ -25,7 +25,7 @@ export default function App() {
   const convertToDiscordMarkdown = useCallback((htmlText: string) => {
     let markdownText = htmlText.replace(
       /<span class='ansi-(\d+)'>(.*?)<\/span>/g,
-      (match, code, content) => {
+      (code, content) => {
         switch (parseInt(code)) {
           // Foreground colors
           case 30:
